@@ -86,10 +86,11 @@ def main():
     csvreader = csv.DictReader(file)
     a ={}
     for row in csvreader:
-        last_account_no = row['Account_No']
+        a[row['Account_No']] = row
 
+    #print(a)
     df = pd.read_csv("data.csv")
-    print(df)
+    #print(df)
 
         
     while (True):
